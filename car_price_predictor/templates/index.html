@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir='ltr'>
+    <head>
+        <meta charset="utf-8">
+        <title>Home Page</title>
+    </head>
+    <body>
+        <h1>Car Price Predictor</h1>
+        <form action="{% url 'result' %}" method="POST">
+            {% csrf_token %}
+
+            <p>Enter the year of the car: </p>
+            <input type="text" name="Year">
+            <br> 
+
+            <p>Present Price of the car: </p>
+            <input type="text" name="Present_Price">
+            <br>
+
+            <p>Enter the Kms Driven: </p>
+            <input type="text" name="Kms_Driven">
+            <br>
+
+            <p>Fuel Type: </p>
+            <input type="text" name="Fuel_Type">
+            <br>
+
+            <p>Transmission of car: </p>
+            <input type="text" name="Transmission">
+            <br>
+
+            <p>Owner: </p>
+            <input type="text" name="Owner">
+            <br>
+
+            <input type="submit" value="Predict">
+        </form>
+    </body>
+</html>
